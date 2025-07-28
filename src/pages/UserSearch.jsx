@@ -36,6 +36,8 @@ const UserSearch = () => {
         { id: 'AJU-CD3E5F7-G9H1I3', name: 'Iris Brown', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-03-20', amountEarned: 990.75 },
         { id: 'AJU-DE4F6G8-H0I2J4', name: 'Jack Smith', referredBy: 'AJU-XY9Z3K7-L5M9N1', joinDate: '2024-03-22', amountEarned: 550.50 },
         { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
+        { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
+        { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
       ],
       // Level 3 - Referrals by Level 2 users
       [
