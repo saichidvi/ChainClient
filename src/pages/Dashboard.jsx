@@ -1,7 +1,7 @@
 const Dashboard = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Welcome to Aarka Jewellers Chain Software</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">Welcome to Aarkaaa Jewellers Chain Software</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="bg-white rounded-lg shadow p-6">
