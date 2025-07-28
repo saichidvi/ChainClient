@@ -23,6 +23,7 @@ const UserSearch = () => {
       // Level 1 - Direct referrals
       [
         { id: 'AJU-MN5L9G3-C4D8E2', name: 'Alice Smith', joinDate: '2024-02-10', amountEarned: 1502.00 },
+        { id: 'AJU-XY9Z3K7-L5M9N1', name: 'Frank Wilson', joinDate: '2024-02-20', amountEarned: 1800.75 },
         { id: 'AJU-XY9Z3K7-L5M9N1', name: 'Frank Wilson', joinDate: '2024-02-20', amountEarned: 1800.75 }
       ],
       // Level 2 - Referrals by Level 1 users (more than 8 for testing)
@@ -35,16 +36,13 @@ const UserSearch = () => {
         { id: 'AJU-CD3E5F7-G9H1I3', name: 'Iris Brown', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-03-20', amountEarned: 990.75 },
         { id: 'AJU-DE4F6G8-H0I2J4', name: 'Jack Smith', referredBy: 'AJU-XY9Z3K7-L5M9N1', joinDate: '2024-03-22', amountEarned: 550.50 },
         { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
-        { id: 'AJU-FG6H8I0-J2K4L6', name: 'Liam Davis', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-03-28', amountEarned: 880.25 },
-        { id: 'AJU-GH7I9J1-K3L5M7', name: 'Maria Garcia', referredBy: 'AJU-XY9Z3K7-L5M9N1', joinDate: '2024-03-30', amountEarned: 720.00 },
-        { id: 'AJU-HI8J0K2-L4M6N8', name: 'Nathan Chen', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-04-02', amountEarned: 1050.50 },
-        { id: 'AJU-IJ9K1L3-M5N7O9', name: 'Olivia Park', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-04-05', amountEarned: 950.00 }
       ],
       // Level 3 - Referrals by Level 2 users
       [
         { id: 'AJU-JK1L3M5-N7O9P1', name: 'Helen Kim', referredBy: 'AJU-QR9P3K7-G8H2I6', joinDate: '2024-04-01', amountEarned: 450.00 },
         { id: 'AJU-KL2M4N6-O8P0Q2', name: 'Ivan Chen', referredBy: 'AJU-UV3T7O1-K2L6M0', joinDate: '2024-04-05', amountEarned: 380.25 },
-        { id: 'AJU-LM3N5O7-P9Q1R3', name: 'Julia Park', referredBy: 'AJU-UV3T7O1-K2L6M0', joinDate: '2024-04-10', amountEarned: 520.75 }
+        { id: 'AJU-LM3N5O7-P9Q1R3', name: 'Julia Park', referredBy: 'AJU-UV3T7O1-K2L6M0', joinDate: '2024-04-10', amountEarned: 520.75 },
+        { id: 'AJU-HI8J0K2-L4M6N8', name: 'Nathan Chen', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-04-02', amountEarned: 1050.50 },
       ]
     ]
   };
