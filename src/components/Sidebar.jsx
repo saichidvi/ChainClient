@@ -8,6 +8,7 @@ const Sidebar = () => {
     { path: '/dashboard', name: 'Dashboard', icon: '📊' },
     { path: '/user-registration', name: 'User Registration', icon: '👤' },
     { path: '/user-search', name: 'User Search', icon: '🔍' },
+    { path: '/product', name: 'Product Purchase', icon: '🛍️' },
     // { path: '/projects', name: 'Projects', icon: '📁' },
     // { path: '/tasks', name: 'Tasks', icon: '✓' },
     // { path: '/settings', name: 'Settings', icon: '⚙️' },

@@ -9,7 +9,6 @@ const UserRegistration = () => {
     refererId: ''
   });
   
-  const [generatedCode, setGeneratedCode] = useState('');
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleInputChange = (e) => {
@@ -20,24 +19,14 @@ const UserRegistration = () => {
     }));
   };
 
-  const generateUserCode = () => {
-    const timestamp = Date.now().toString(36);
-    const randomPart = Math.random().toString(36).substring(2, 8);
-    return `AJU-${timestamp}-${randomPart}`.toUpperCase();
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Generate unique code for the user
-    const userCode = generateUserCode();
-    setGeneratedCode(userCode);
-    
     // Prepare data for backend
     const userData = {
       ...formData,
-      refererId: formData.refererId || 'none',
-      userCode: userCode
+      refererId: formData.refererId || 'none'
     };
     
     // TODO: Send userData to backend API
@@ -171,8 +160,8 @@ const UserRegistration = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Registration Successful!</h3>
               <p className="text-gray-600 mb-4">User has been registered successfully.</p>
               <div className="bg-gray-100 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-600 mb-2">Generated User Code:</p>
-                <p className="text-xl font-mono font-bold text-blue-600">{generatedCode}</p>
+                <p className="text-sm text-gray-600 mb-2">User ID (Mobile Number):</p>
+                <p className="text-xl font-mono font-bold text-blue-600">{formData.mobile}</p>
               </div>
               <button
                 onClick={() => setShowSuccessModal(false)}

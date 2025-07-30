@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import UserRegistration from './pages/UserRegistration';
 import UserSearch from './pages/UserSearch';
+import Product from './pages/Product';
 import Projects from './pages/Projects';
 import Tasks from './pages/Tasks';
 import Settings from './pages/Settings';
@@ -28,6 +29,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="user-registration" element={<UserRegistration />} />
             <Route path="user-search" element={<UserSearch />} />
+            <Route path="product" element={<Product />} />
             <Route path="projects" element={<Projects />} />
             <Route path="tasks" element={<Tasks />} />
             <Route path="settings" element={<Settings />} />

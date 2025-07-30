@@ -11,40 +11,39 @@ const UserSearch = () => {
 
   // Mock data for demonstration - replace with actual API call
   const mockUserData = {
-    userCode: 'AJU-LN4K8F2-A3B7C9',
     name: 'John Doe',
     mobile: '9876543210',
     email: 'john.doe@example.com',
     address: '123 Main Street, City, State 12345',
-    refererId: 'AJU-KM3J7E1-B2A6D8',
+    refererId: '9876543200',
     registrationDate: '2024-01-15',
     walletAmount: 9999.00,
     referralLevels: [
       // Level 1 - Direct referrals
       [
-        { id: 'AJU-MN5L9G3-C4D8E2', name: 'Alice Smith', joinDate: '2024-02-10', amountEarned: 1502.00 },
-        { id: 'AJU-XY9Z3K7-L5M9N1', name: 'Frank Wilson', joinDate: '2024-02-20', amountEarned: 1800.75 },
-        { id: 'AJU-XY9Z3K7-L5M9N1', name: 'Frank Wilson', joinDate: '2024-02-20', amountEarned: 1800.75 }
+        { id: '9876543211', name: 'Alice Smith', joinDate: '2024-02-10', amountEarned: 1502.00 },
+        { id: '9876543212', name: 'Frank Wilson', joinDate: '2024-02-20', amountEarned: 1800.75 },
+        { id: '9876543213', name: 'Sarah Johnson', joinDate: '2024-02-20', amountEarned: 1800.75 }
       ],
       // Level 2 - Referrals by Level 1 users (more than 8 for testing)
       [
-        { id: 'AJU-OP7N1I5-E6F0G4', name: 'Bob Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-01', amountEarned: 850.00 },
-        { id: 'AJU-QR9P3K7-G8H2I6', name: 'Carol Davis', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-05', amountEarned: 920.50 },
-        { id: 'AJU-UV3T7O1-K2L6M0', name: 'Eva Martinez', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-03-10', amountEarned: 1100.00 },
-        { id: 'AJU-AB1C3D5-E7F9G1', name: 'George Lee', referredBy: 'AJU-XY9Z3K7-L5M9N1', joinDate: '2024-03-15', amountEarned: 750.25 },
-        { id: 'AJU-BC2D4E6-F8G0H2', name: 'Harry Johnson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-18', amountEarned: 680.00 },
-        { id: 'AJU-CD3E5F7-G9H1I3', name: 'Iris Brown', referredBy: 'AJU-ST1R5M9-I0J4K8', joinDate: '2024-03-20', amountEarned: 990.75 },
-        { id: 'AJU-DE4F6G8-H0I2J4', name: 'Jack Smith', referredBy: 'AJU-XY9Z3K7-L5M9N1', joinDate: '2024-03-22', amountEarned: 550.50 },
-        { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
-        { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
-        { id: 'AJU-EF5G7H9-I1J3K5', name: 'Kate Wilson', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-03-25', amountEarned: 1250.00 },
+        { id: '9876543221', name: 'Bob Wilson', referredBy: '9876543211', joinDate: '2024-03-01', amountEarned: 850.00 },
+        { id: '9876543222', name: 'Carol Davis', referredBy: '9876543211', joinDate: '2024-03-05', amountEarned: 920.50 },
+        { id: '9876543223', name: 'Eva Martinez', referredBy: '9876543212', joinDate: '2024-03-10', amountEarned: 1100.00 },
+        { id: '9876543224', name: 'George Lee', referredBy: '9876543212', joinDate: '2024-03-15', amountEarned: 750.25 },
+        { id: '9876543225', name: 'Harry Johnson', referredBy: '9876543211', joinDate: '2024-03-18', amountEarned: 680.00 },
+        { id: '9876543226', name: 'Iris Brown', referredBy: '9876543213', joinDate: '2024-03-20', amountEarned: 990.75 },
+        { id: '9876543227', name: 'Jack Smith', referredBy: '9876543212', joinDate: '2024-03-22', amountEarned: 550.50 },
+        { id: '9876543228', name: 'Kate Wilson', referredBy: '9876543211', joinDate: '2024-03-25', amountEarned: 1250.00 },
+        { id: '9876543229', name: 'Linda Brown', referredBy: '9876543211', joinDate: '2024-03-25', amountEarned: 1250.00 },
+        { id: '9876543230', name: 'Mike Davis', referredBy: '9876543211', joinDate: '2024-03-25', amountEarned: 1250.00 },
       ],
       // Level 3 - Referrals by Level 2 users
       [
-        { id: 'AJU-JK1L3M5-N7O9P1', name: 'Helen Kim', referredBy: 'AJU-QR9P3K7-G8H2I6', joinDate: '2024-04-01', amountEarned: 450.00 },
-        { id: 'AJU-KL2M4N6-O8P0Q2', name: 'Ivan Chen', referredBy: 'AJU-UV3T7O1-K2L6M0', joinDate: '2024-04-05', amountEarned: 380.25 },
-        { id: 'AJU-LM3N5O7-P9Q1R3', name: 'Julia Park', referredBy: 'AJU-UV3T7O1-K2L6M0', joinDate: '2024-04-10', amountEarned: 520.75 },
-        { id: 'AJU-HI8J0K2-L4M6N8', name: 'Nathan Chen', referredBy: 'AJU-MN5L9G3-C4D8E2', joinDate: '2024-04-02', amountEarned: 1050.50 },
+        { id: '9876543241', name: 'Helen Kim', referredBy: '9876543222', joinDate: '2024-04-01', amountEarned: 450.00 },
+        { id: '9876543242', name: 'Ivan Chen', referredBy: '9876543223', joinDate: '2024-04-05', amountEarned: 380.25 },
+        { id: '9876543243', name: 'Julia Park', referredBy: '9876543223', joinDate: '2024-04-10', amountEarned: 520.75 },
+        { id: '9876543244', name: 'Nathan Chen', referredBy: '9876543221', joinDate: '2024-04-02', amountEarned: 1050.50 },
       ]
     ]
   };
@@ -62,7 +61,7 @@ const UserSearch = () => {
     
     // Simulate API call - replace with actual backend call
     setTimeout(() => {
-      if (searchId === mockUserData.userCode) {
+      if (searchId === mockUserData.mobile) {
         setUserData(mockUserData);
       } else {
         setError('User not found');
@@ -171,7 +170,7 @@ const UserSearch = () => {
             type="text"
             value={searchId}
             onChange={(e) => setSearchId(e.target.value)}
-            placeholder="Enter User ID (e.g., AJU-LN4K8F2-A3B7C9)"
+            placeholder="Enter Mobile Number (10 digits)"
             className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
@@ -205,8 +204,8 @@ const UserSearch = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm text-gray-600">User Id:</label>
-                <p className="font-mono font-semibold">{userData.userCode}</p>
+                <label className="text-sm text-gray-600">Mobile Number (User ID):</label>
+                <p className="font-mono font-semibold">{userData.mobile}</p>
               </div>
               <div>
                 <label className="text-sm text-gray-600">Name:</label>
@@ -334,7 +333,7 @@ const UserSearch = () => {
             {/* Root User */}
             <div className="mb-8 text-center">
               <div className="inline-block bg-gray-800 text-white rounded-lg p-4 shadow-xl">
-                <div className="text-xs font-mono mb-1">{userData.userCode}</div>
+                <div className="text-xs font-mono mb-1">{userData.mobile}</div>
                 <div className="text-lg font-bold">{userData.name}</div>
                 <div className="text-xs opacity-75 mt-1">Root User</div>
               </div>
